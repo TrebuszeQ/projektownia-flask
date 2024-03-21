@@ -1,15 +1,15 @@
 from flask import Flask, request
-import tomllib
 from flask_sqlalchemy import SQLAlchemy
+import tomllib
+import os
 
+
+basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
-app.config.from_file("/src/properties.toml", load=tomllib.load, text=False)
+app.config.from_file("../properties.toml", load=tomllib.load, text=False)
+app.config['SQLALCHEMY_DATABASE_URI'] =\
+    'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 db = SQLAlchemy(app)
-
-
-@app.route('/')
-def hello_world():  # put application's code here
-    return request.headers.get('User-Agent')
 
 
 if __name__ == '__main__':

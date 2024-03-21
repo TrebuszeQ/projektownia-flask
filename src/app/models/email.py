@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from app.app import db
+from src.app.app import db
 
 
 @dataclass(repr=True)

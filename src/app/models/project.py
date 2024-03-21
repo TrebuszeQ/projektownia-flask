@@ -1,4 +1,4 @@
-from app.app import db
+from src.app.app import db
 from dataclasses import dataclass
 
 

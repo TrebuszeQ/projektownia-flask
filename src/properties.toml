@@ -25,5 +25,9 @@ DEBUG_TB_PANELS = [
 
 DB_USERNAME = ''
 DB_PASSWORD = ''
-SQLALCHEMY_DATABASE_URI = 'postgresql://' + DB_USERNAME':'DB_PASSWORD@nazwa_hosta/baza_danych'
+PG_DB_URI = 'postgresql://DB_USERNAME:DB_PASSWORD@nazwa_hosta/baza_danych'
+SQLALCHEMY_DATABASE_URI = 'sqlite:////bezwzględna/ścieżka/do/bazy_danych'
+SQLALCHEMY_BINDS = ''
+SQLALCHEMY_TRACK_MODIFICATIONS = true
+
 
