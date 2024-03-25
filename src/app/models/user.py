@@ -1,6 +1,4 @@
-from datetime import datetime
-
-from src.app.app import db
+from app import db
 from dataclasses import dataclass
 
 
