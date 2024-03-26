@@ -1,11 +1,19 @@
 [default]
+APP_NAME = "projektownia-flask"
+SECRET_KEY = 'the random string'
 DEBUG = false
 TITLE = "projektownia-api"
-DB_USERNAME = ''
-DB_PASSWORD = ''
-SQLALCHEMY_DATABASE_URI = ''
+APP_ADMIN = ""
+APP_MAIL_SENDER = ""
+MAIL_SERVER = "smtp.googlemail.com"
+MAIL_PORT = 587
+MAIL_USE_TLS = false
+MAIL_USE_SSL = false
+MAIL_USERNAME = "None"
+MAIL_PASSWORD = "None"
+SQL_ALCHEMY_TRACK_NOTIFICATIONS = false
 
-[development]
+
 TEMPLATES_AUTO_RELOAD = true
 DEBUG = true
 DEBUG_TOOLBAR_ENABLED = true
@@ -29,5 +37,6 @@ PG_DB_URI = 'postgresql://DB_USERNAME:DB_PASSWORD@nazwa_hosta/baza_danych'
 SQLALCHEMY_DATABASE_URI = 'sqlite:////bezwzględna/ścieżka/do/bazy_danych'
 SQLALCHEMY_BINDS = ''
 SQLALCHEMY_TRACK_MODIFICATIONS = true
+
 
 
